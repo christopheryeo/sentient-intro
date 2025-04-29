@@ -8,10 +8,13 @@ This project introduces Sentient.io’s strengths, solutions, and value proposit
 
 ### Recent Changes
 - **Content Overhaul:** All reseller training, quizzes, and checklist content have been removed. The site now features concise, marketing-driven sections focused on SmartChat’s differentiators, technical strengths, security, compliance, business impact, and partnership value.
-- **Dynamic Markdown Content:** The site dynamically renders content from `content/content.md`, including the About section, using a custom markdown parser for correct formatting.
 - **Image Assets:** All images from the sales-enablement project have been copied to `static/images` for use in this site.
 - **Modern Structure:** The project is organized for easy updates to content and assets, supporting enterprise and partnership marketing needs.
 - **Markdown Source of Truth:** As of April 2025, `content/content.md` has been fully synchronized with the latest content and structure from `index.html`. All main sections (Welcome, About, Company Overview, Value, Solutions, SmartChat, Partners, Case Studies, Team, Contact) are now maintained in markdown for ease of editing and future updates. This ensures consistency between the HTML and markdown content. Further edits to the website content should be made in `content/content.md` going forward.
+- **April 2025 UI/Content Update:**
+    - Updated the "Domain Expertise" text in the "Our Value to Enterprises" section to match `content.md`.
+    - Fixed vertical alignment of paragraph text in the four value panels for consistent appearance.
+    - Improved the visual consistency of the "Our Value to Enterprises" section with enhanced CSS for the cards.
 
 ## Project Structure
 - `content/` – Markdown content for the website (About, Solutions, Value Proposition, etc.)

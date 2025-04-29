@@ -29,6 +29,61 @@ main {
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     padding: 2rem;
 }
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+}
+
+.card-icon {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3949ab;
+}
+
+.card h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 14px;
+    min-height: 2.2em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.card p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 72px;
+}
+
+.grid-container {
+    align-items: stretch;
+}
+.card h3, .card p {
+    margin-top: 0;
+    margin-bottom: 0.7em;
+}
+.card p {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .intro h2, .features h2 {
     color: #5f2c82;
     margin-top: 0;
