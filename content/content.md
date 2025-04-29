@@ -26,6 +26,8 @@ Unlock the full potential of your organization with secure, enterprise-grade AI 
 - BEENEXT
 - ABC Dream Ventures
 - DG Ventures
+- Origgin Ventures
+- Avior Capital
 
 #### Clients & Partners
 - Toyota Tsusho Asia Pacific
