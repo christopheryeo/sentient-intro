@@ -1,0 +1,1 @@
+# No Python requirements for pure HTML/CSS project

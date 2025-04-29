@@ -1,0 +1,29 @@
+# Sentient Intro
+
+A corporate introduction and partnership site for Sentient, designed to present Sentient as a valuable, innovative partner to enterprises.
+
+## Purpose
+
+This project introduces Sentient.io’s strengths, solutions, and value proposition for enterprise and government clients. It is intended for partnership, business development, and executive engagement—not for reseller training.
+
+### Recent Changes
+- **Content Overhaul:** All reseller training, quizzes, and checklist content have been removed. The site now features concise, marketing-driven sections focused on SmartChat’s differentiators, technical strengths, security, compliance, business impact, and partnership value.
+- **Dynamic Markdown Content:** The site dynamically renders content from `content/content.md`, including the About section, using a custom markdown parser for correct formatting.
+- **Image Assets:** All images from the sales-enablement project have been copied to `static/images` for use in this site.
+- **Modern Structure:** The project is organized for easy updates to content and assets, supporting enterprise and partnership marketing needs.
+
+## Project Structure
+- `content/` – Markdown content for the website (About, Solutions, Value Proposition, etc.)
+- `static/` – Static assets such as CSS, images (`static/images/`), and JavaScript
+- `templates/` – HTML templates for rendering the site
+- `tests/` – Test scripts (if any site logic or automation is added)
+
+## Usage
+Open `index.html` in your browser to view the introduction site. You can customize the content in `content/content.md` and extend the design or features as needed for your enterprise or partnership presentations.
+
+### Technical Notes
+- **Custom Markdown Parsing:** The About Us page uses a custom markdown parser (instead of marked.js) to ensure correct formatting for headings and bullet points.
+- **Image Management:** Place or update images in `static/images/` as needed for your marketing content.
+
+## Contact
+For partnership inquiries or to request a demo, contact [Sentient.io](mailto:contact@sentient.io).
