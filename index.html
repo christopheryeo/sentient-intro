@@ -4,474 +4,585 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentient: Your Enterprise AI Partner</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
+        /* Base styling */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
             line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
         }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #014421;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-buttons {
+            margin-top: 30px;
+        }
+        
+        .cta-buttons a {
+            display: inline-block;
+            background-color: #ff4081;
+            color: white;
+            padding: 12px 25px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-buttons a:hover {
+            background-color: #f50057;
+        }
+        
         section {
-            padding: 2rem 0;
+            padding: 60px 0;
+            border-bottom: 1px solid #e0e0e0;
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #014421 0%, #0b3d2e 100%);
+        
+        h2 {
+            font-size: 2.5em;
+            color: #014421;
+            margin-bottom: 30px;
+            text-align: center;
         }
+        
+        h3 {
+            font-size: 1.8em;
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+        
+        h4 {
+            font-size: 1.3em;
+            color: #5c6bc0;
+            margin-bottom: 15px;
+        }
+        
+        .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 900px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
         .card {
-            transition: all 0.3s ease;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+        
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
-        .section-divider {
-            height: 4px;
-            background: linear-gradient(90deg, #014421 0%, #43a047 100%);
-            width: 100px;
-            margin: 1rem 0;
+        
+        .card h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        .card-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #3949ab;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .case-study {
+            background-color: #f5f5f5;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background-color: #014421;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .company-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .info-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-6 flex items-center justify-between">
-            <a href="index.html" class="flex items-center">
-                <img src="static/images/sentient-logo.png" alt="Sentient Logo" style="height:56px; margin-right:10px;">
-            </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="text-gray-700 hover:text-green-800">Home</a>
-                <a href="#about" class="text-gray-700 hover:text-green-800">About</a>
-                <a href="#solutions" class="text-gray-700 hover:text-green-800">Solutions</a>
-                <a href="#team" class="text-gray-700 hover:text-green-800">Team</a>
-                <a href="#differentiators" class="text-gray-700 hover:text-green-800">Differentiators</a>
-                <a href="#case-studies" class="text-gray-700 hover:text-green-800">Case Studies</a>
-                <a href="#contact" class="text-gray-700 hover:text-green-800">Contact</a>
+<body style="padding-top: 72px;">
+    <!-- Navigation Bar -->
+    <nav id="main-navbar" style="background-color: #fff; color: #014421; padding: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); position: fixed; top: 0; width: 100%; z-index: 1000;">
+    <div class="container" style="display: flex; align-items: center; justify-content: flex-start; gap: 18px; font-size: 0.98em;">
+        <a href="#" style="display: flex; align-items: center; margin-right: 32px;">
+            <img src="static/images/sentient-logo.png" alt="Sentient Logo" style="height: 62px; width: auto; vertical-align: middle;">
+        </a>
+        <a href="#" style="color: #014421; text-decoration: none; font-weight: bold;">Home</a>
+        <a href="#company-overview" style="color: #014421; text-decoration: none;">Company Overview</a>
+        
+        <a href="#value" style="color: #014421; text-decoration: none;">Enterprise Value</a>
+        <a href="#solutions" style="color: #014421; text-decoration: none;">Solutions</a>
+        <a href="#partner" style="color: #014421; text-decoration: none;">Partner</a>
+        <a href="#case-studies" style="color: #014421; text-decoration: none;">Case Studies</a>
+        <a href="#team" style="color: #014421; text-decoration: none;">Team</a>
+        <a href="#differentiators" style="color: #014421; text-decoration: none;">Differentiators</a>
+        <a href="#contact" style="color: #014421; text-decoration: none;">Contact</a>
+    </div>
+</nav>
+    <!-- Header Banner Section -->
+    <header>
+        <div class="container">
+            <h1>Sentient: Your Enterprise AI Partner</h1>
+            <p>Welcome to Sentient: Powering Enterprise Intelligence. Unlock the full potential of your organization with secure, enterprise-grade AI solutions tailored to your needs.</p>
+            <div class="cta-buttons">
+                <a href="#solutions">Discover Our Solutions</a>
+                <a href="https://www.sentient.io" target="_blank">Visit Sentient.io</a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Welcome Banner -->
-    <section class="gradient-bg text-white py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Sentient: Powering Enterprise Intelligence</h1>
-            <p class="text-xl mb-8">Unlock the full potential of your organization with secure, enterprise-grade AI solutions tailored to your needs.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="#solutions" class="bg-white text-green-900 px-6 py-3 rounded-lg font-semibold hover:bg-green-100 transition">Discover Our Solutions</a>
-                <a href="https://www.sentient.io" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition">Visit Sentient.io</a>
+    <!-- Company Overview Section -->
+    <section id="company-overview">
+        <div class="container">
+            <h2>Company Overview</h2>
+            
+            <div class="company-info" style="display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap;">
+    <div class="info-column" style="flex: 1 1 320px; min-width: 280px;">
+        <h3>Company Facts</h3>
+        <ul>
+            <li><strong>Founded:</strong> May 2017</li>
+            <li><strong>Headquarters:</strong> Singapore</li>
+            <li><strong>Founder & CEO:</strong> Christopher Yeo</li>
+            <li><strong>Employees:</strong> Approximately 19 as of 2024</li>
+            <li><strong>Funding:</strong> Raised over $7 million across multiple rounds</li>
+        </ul>
+        <div style="margin-top:18px; max-width:340px; margin-left:auto; margin-right:auto; text-align:left;">
+            <img src="static/images/singapore.png" alt="Singapore Island Map" style="max-width:340px; width:100%; height:auto; opacity:0.85; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06); display:block;">
+            <div style="font-size:0.85em; color:#888; margin-top:4px; text-align:left;">Singapore Island</div>
+        </div>
+    </div>
+    <div class="info-column" style="flex: 1 1 320px; min-width: 280px;">
+        <h3>Investors & Partners</h3>
+        <h4>Key Investors</h4>
+        <ul>
+            <li>Real Tech Holdings</li>
+            <li>SEEDS Capital</li>
+            <li>BEENEXT</li>
+            <li>ABC Dream Ventures</li>
+            <li>DG Ventures</li>
+        </ul>
+        <h4>Clients & Partners</h4>
+        <ul>
+            <li>Toyota Tsusho Asia Pacific</li>
+            <li>IHI</li>
+                        <li>Daido Steel</li>
+                        <li>Mediacorp</li>
+                        <li>Google</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <h3>Mission and Vision</h3>
+                <p><strong>Sentient.io's mission is to democratize enterprise AI adoption.</strong> By enabling developers and business users to leverage powerful, modular AI services — without needing AI expertise — Sentient reduces the barrier to advanced automation and intelligent applications.</p>
+                <p>The transition from microservice-based platforms to agent-based architectures positions Sentient.io at the forefront of the next phase in AI evolution.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Sentient -->
-    <section id="about" class="bg-white py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-green-900 mb-8">About Sentient</h2>
-            <div class="section-divider mx-auto"></div>
-            <div class="max-w-4xl mx-auto">
-                <p class="mb-4">Sentient.io is a Singapore-based technology company specializing in secure, private, and customizable AI solutions for enterprises. Our mission is to democratize enterprise AI adoption by enabling developers and business users to leverage powerful, modular AI services—without requiring deep AI expertise. We reduce the barriers to intelligent automation and high-impact decision-making.</p>
-                <p class="mb-4">Our flagship product, SmartChat, delivers "Private AI" by operating within an organization's own infrastructure or secure cloud, ensuring sensitive data remains protected. SmartChat only uses uploaded corporate information, ensuring that only authorized information is used to answer questions, prioritizing data security and privacy.</p>
-                <p class="mb-4">Sentient.io continues to lead in private, contextual, and compliant AI integration. The SmartChat product and our evolving Agentic AI platform reflect our vision to enable secure, explainable, and impactful automation for enterprises. We serve regulated sectors such as finance, healthcare, and government, and offer solutions with full deployment flexibility.</p>
-                <p>We are trusted by enterprises and governments alike, and our evolution from traditional microservice architectures to agent-based AI systems puts us at the forefront of next-generation enterprise intelligence.</p>
-            </div>
+    <!-- About Sentient Subsection (below Mission & Vision) -->
+    <section id="about" style="margin-top:-18px; padding-top:0;">
+        <div class="container">
+            <h3 style="color:#014421; font-size:1.5em; margin-bottom:16px; margin-top:0;">About Sentient</h3>
+            <p>Sentient.io is a Singapore-based technology company specializing in secure, private, and customizable AI solutions for enterprises. Our mission is to democratize enterprise AI adoption by enabling developers and business users to leverage powerful, modular AI services—without requiring deep AI expertise. We reduce the barriers to intelligent automation and high-impact decision-making.</p>
+            <p>Our flagship product, SmartChat, delivers "Private AI" by operating within an organization's own infrastructure or secure cloud, ensuring sensitive data remains protected. SmartChat only uses uploaded corporate information, ensuring that only authorized information is used to answer questions, prioritizing data security and privacy.</p>
+            <p>Sentient.io continues to lead in private, contextual, and compliant AI integration. The SmartChat product and our evolving Agentic AI platform reflect our vision to enable secure, explainable, and impactful automation for enterprises. We serve regulated sectors such as finance, healthcare, and government, and offer solutions with full deployment flexibility.</p>
+            <p>We are trusted by enterprises and governments alike, and our evolution from traditional microservice architectures to agent-based AI systems puts us at the forefront of next-generation enterprise intelligence.</p>
         </div>
     </section>
 
-    <!-- Our Value to Enterprises -->
-    <section class="bg-gray-100 py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Our Value to Enterprises</h2>
-            <div class="section-divider mx-auto"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-                <div class="bg-white p-6 rounded-lg shadow-md card">
-                    <div class="text-green-500 text-4xl mb-4">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Enterprise-Grade Security</h3>
+    <!-- Enterprise Value Section -->
+    <section id="value">
+        <div class="container">
+            <h2>Our Value to Enterprises</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon">  
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="11" width="18" height="10" rx="2" stroke="#014421" stroke-width="2" fill="none"/>
+    <path d="M7 11V7a5 5 0 0110 0v4" stroke="#014421" stroke-width="2" fill="none"/>
+    <circle cx="12" cy="16" r="2" stroke="#014421" stroke-width="2" fill="none"/>
+  </svg>
+</div>
+                    <h3>Enterprise-Grade Security</h3>
                     <p>Solutions designed with the highest standards for data privacy, compliance, and control.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card">
-                    <div class="text-green-500 text-4xl mb-4">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Custom AI Integrations</h3>
+                
+                <div class="card">
+                    <div class="card-icon">
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.5 12a5.5 5.5 0 00-11 0c0 2.1 1.2 4.1 3.1 5.2.2.1.4.3.4.5v1.3c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-1.3c0-.2.2-.4.4-.5A5.5 5.5 0 0017.5 12z" stroke="#014421" stroke-width="2" fill="none"/>
+    <circle cx="12" cy="12" r="2" stroke="#014421" stroke-width="2" fill="none"/>
+    <circle cx="9" cy="10" r="1" fill="#014421"/>
+    <circle cx="15" cy="10" r="1" fill="#014421"/>
+  </svg>
+</div>
+                    <h3>Custom AI Integrations</h3>
                     <p>Seamless integration with your existing workflows, knowledge bases, and IT infrastructure.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card">
-                    <div class="text-green-500 text-4xl mb-4">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Domain Expertise</h3>
+                
+                <div class="card">
+                    <div class="card-icon">
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 17v4M8 21h8" stroke="#014421" stroke-width="2" fill="none"/>
+    <ellipse cx="12" cy="10" rx="6" ry="7" stroke="#014421" stroke-width="2" fill="none"/>
+    <path d="M5 6L3 8m16-2l2 2" stroke="#014421" stroke-width="2" fill="none"/>
+  </svg>
+</div>
+                    <h3>Domain Expertise</h3>
                     <p>Proven success across finance, government, healthcare, and more.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card">
-                    <div class="text-green-500 text-4xl mb-4">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Scalable & Flexible</h3>
+                
+                <div class="card">
+                    <div class="card-icon">
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#014421" stroke-width="2" fill="none"/>
+    <path d="M7 17l4-4 3 3 4-6" stroke="#014421" stroke-width="2" fill="none"/>
+  </svg>
+</div>
+                    <h3>Scalable & Flexible</h3>
                     <p>Deploy on-premise, private cloud, or hybrid environments to fit your requirements.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions & Capabilities -->
-    <section id="solutions" class="bg-white py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Solutions & Capabilities</h2>
-            <div class="section-divider mx-auto"></div>
+    <!-- Solutions Section -->
+    <section id="solutions">
+        <div class="container">
+            <h2>Solutions & Capabilities</h2>
             
-            <!-- AI Platform Capabilities -->
-            <div class="mt-12">
-                <h3 class="text-2xl font-bold text-green-800 mb-6">AI Platform Capabilities</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="border border-green-900 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-3">Conversational AI</h4>
-                        <p>Intelligent chatbots and virtual assistants tailored for complex enterprise needs.</p>
-                    </div>
-                    <div class="border border-green-900 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-3">Knowledge Management</h4>
-                        <p>AI-powered search and document understanding to unlock organizational knowledge.</p>
-                    </div>
-                    <div class="border border-green-900 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-3">Analytics & Insights</h4>
-                        <p>Actionable business intelligence from your data, with privacy-first design.</p>
-                    </div>
-                    <div class="border border-green-900 p-6 rounded-lg">
-                        <h4 class="text-xl font-semibold mb-3">Custom AI Projects</h4>
-                        <p>End-to-end support for your unique digital transformation journey.</p>
-                    </div>
-                </div>
+            <h2 style="color: #188038; font-size: 2em; margin-bottom: 14px;">Sentient AI Platform</h2>
+<p style="margin: 0 auto 24px auto; font-size: 1.08em; color: #222; max-width: 1200px;">
+The Sentient.io AI Platform accelerates digital transformation by embedding advanced AI and analytics directly into enterprise operations. It offers a unified, secure, and scalable cloud-based solution, giving organizations access to a marketplace of pre-trained AI microservices through simple APIs. This enables rapid deployment of AI-powered tools without deep in-house expertise or major upfront investment. The platform includes robust modules for account management, metering, billing, and access control, supporting compliance and governance. Sentient.io empowers teams to orchestrate AI across business units and drive innovation through a collaborative ecosystem—streamlining processes, unlocking efficiencies, and future-proofing enterprise operations cost-effectively.
+</p>
+
+
+            <div class="grid-container">
+                <div class="card">
+    <div class="card-icon">
+      <svg width="38" height="38" viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto 10px auto;" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="5" width="16" height="14" rx="2" stroke="#014421" stroke-width="2" fill="none"/>
+        <path d="M8 5v14" stroke="#014421" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <h4>Knowledge Management</h4>
+    <p>AI-powered search and document understanding to unlock organizational knowledge.</p>
+</div>
+                
+                <div class="card">
+    <div class="card-icon">
+      <svg width="38" height="38" viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto 10px auto;" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#014421" stroke-width="2" fill="none"/>
+        <path d="M7 17l4-4 3 3 4-6" stroke="#014421" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <h4>Analytics & Insights</h4>
+    <p>Actionable business intelligence from your data, with privacy-first design.</p>
+</div>
+                
+                <div class="card">
+    <div class="card-icon">
+      <svg width="38" height="38" viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto 10px auto;" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="16" height="16" rx="3" stroke="#014421" stroke-width="2" fill="none"/>
+        <path d="M9 9h6v6H9z" stroke="#014421" stroke-width="2" fill="none"/>
+        <circle cx="8" cy="8" r="1" fill="#014421"/>
+        <circle cx="16" cy="16" r="1" fill="#014421"/>
+      </svg>
+    </div>
+    <h4>Custom AI Projects</h4>
+    <p>End-to-end support for your unique digital transformation journey.</p>
+</div>
+
+<div class="card">
+    <div class="card-icon">
+      <svg width="38" height="38" viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto 10px auto;" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8" cy="12" r="3" stroke="#014421" stroke-width="2" fill="none"/>
+        <circle cx="16" cy="12" r="3" stroke="#014421" stroke-width="2" fill="none"/>
+        <path d="M5 19c0-2 2-4 5-4s5 2 5 4" stroke="#014421" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <h4 style="color: #5050b2; font-size: 1.18em; font-weight: bold; text-align: center; margin-bottom: 10px;">Multi-Agent Collaboration</h4>
+    <p style="font-size: 1.1em; text-align: center; margin: 0 auto; max-width: 340px;">
+        Governance, Planning, Perception, Reasoning, and Communication Agents
+    </p>
+</div>
             </div>
             
-            <!-- SmartChat -->
-            <div class="mt-16 bg-green-50 p-8 rounded-xl">
-                <h3 class="text-2xl font-bold text-green-800 mb-6">SmartChat – Enterprise Conversational AI</h3>
-                <p class="mb-6">SmartChat is Sentient.io's flagship product, built to meet enterprise requirements for privacy, explainability, and contextual accuracy.</p>
+            <h2 style="color: #188038; font-size: 2em; margin-top: 40px; margin-bottom: 10px;">Sentient SmartChat</h2>
+                <p>SmartChat by Sentient.io is an enterprise-grade AI chat platform that transforms how organizations manage and access internal knowledge. Designed for secure on-premise or private cloud deployment, it ensures full data privacy and compliance. SmartChat uses advanced natural language processing and retrieval-augmented generation (RAG) to deliver precise, context-aware answers from diverse document types, including PDFs, spreadsheets, and videos. With features like multilingual support, granular access controls, enterprise integrations (including SharePoint), and analytics dashboards, SmartChat empowers teams to break down knowledge silos, boost productivity, and make faster, more informed decisions—while keeping sensitive information secure.</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                        <h4 class="text-xl font-semibold mb-4">Key Capabilities:</h4>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Private & Secure AI: Deployed within your infrastructure or private cloud</li>
-                            <li>Domain-Specific Intelligence: Tuned for your industry's language and logic</li>
-                            <li>Advanced RAG + NLP: Retrieval-Augmented Generation ensures fact-based responses</li>
-                            <li>Enterprise Integrations: Connects with SharePoint, Confluence, CRMs, and more</li>
-                            <li>Multi-Channel Support: Web, mobile, WhatsApp, Teams, and beyond</li>
-                            <li>Advanced Document Understanding: Extracts insights from complex documents</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold mb-4">Business Impact:</h4>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Accelerated Decision-Making: Find the right answer, instantly</li>
-                            <li>Enhanced Customer Service: Contextual, human-like engagement</li>
-                            <li>Boost Productivity: Automate repetitive queries and knowledge retrieval</li>
-                            <li>Strengthen Compliance: Maintain strict control over sensitive data</li>
-                        </ul>
-                        
-                        <h4 class="text-xl font-semibold mt-6 mb-4">Why Choose SmartChat?</h4>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li>Trusted by leading enterprises and government agencies</li>
-                            <li>Proven track record of secure, scalable AI deployments</li>
-                            <li>Dedicated to responsible, ethical, and transparent AI practices</li>
-                            <li>Backed by Sentient.io's innovation and enterprise support</li>
-                        </ul>
-                    </div>
+                <div style="margin-top: 30px;">
+                    <h4>Key Capabilities:</h4>
+                    <ul>
+                        <li><strong>Private & Secure AI:</strong> Deployed within your infrastructure or private cloud</li>
+                        <li><strong>Domain-Specific Intelligence:</strong> Tuned for your industry's language and logic</li>
+                        <li><strong>Advanced RAG + NLP:</strong> Retrieval-Augmented Generation ensures fact-based, context-aware responses</li>
+                        <li><strong>Enterprise Integrations:</strong> Connects with SharePoint, Confluence, CRMs, and more</li>
+                        <li><strong>Multi-Channel Support:</strong> Web, mobile, WhatsApp, Teams, and beyond</li>
+                        <li><strong>Advanced Document Understanding:</strong> Extracts, summarizes, and delivers insights from complex documents, policies, and knowledge bases</li>
+                    </ul>
                 </div>
-            </div>
+                
+                <div style="margin-top: 30px;">
+                    <h4>Business Impact:</h4>
+                    <ul>
+                        <li><strong>Accelerated Decision-Making:</strong> Find the right answer, instantly</li>
+                        <li><strong>Enhanced Customer Service:</strong> Contextual, human-like engagement</li>
+                        <li><strong>Boost Productivity:</strong> Automate repetitive queries and knowledge retrieval</li>
+                        <li><strong>Strengthen Compliance:</strong> Maintain strict control over sensitive data and ensure all AI-driven answers are based on authorized, up-to-date information</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <h4>Why Choose SmartChat?</h4>
+                    <ul>
+                        <li>Trusted by leading enterprises and government agencies</li>
+                        <li>Proven track record of secure, scalable AI deployments</li>
+                        <li>Dedicated to responsible, ethical, and transparent AI practices</li>
             
-            <!-- Agentic AI Platform -->
-            <div class="mt-16 bg-gray-50 p-8 rounded-xl">
-                <h3 class="text-2xl font-bold text-green-800 mb-6">Introducing the Sentient Agentic AI Platform</h3>
-                <p class="mb-6">Our newest evolution is the Sentient Agentic AI Platform. Built on top of our core AI and data foundation, it brings together:</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="text-lg font-semibold mb-3">Multi-Agent Collaboration</h4>
-                        <p>Governance, Planning, Perception, Reasoning, and Communication Agents</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="text-lg font-semibold mb-3">Orchestration Tools</h4>
-                        <p>Seamless automation via CrewAI and n8n</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="text-lg font-semibold mb-3">Flexible Model Access</h4>
-                        <p>Online (Gemini) and on-premise (Llama 4) LLM support</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="text-lg font-semibold mb-3">Advanced Video Understanding</h4>
-                        <p>Facial analysis, sentiment, banners, scene recognition, and more</p>
-                    </div>
-                </div>
-                
-                <p class="mt-6">This platform is built for clients with sophisticated needs, including government and defense, and supports hybrid deployments from cloud to full on-premise.</p>
-            </div>
         </div>
     </section>
 
-    <!-- Why Partner With Sentient -->
-    <section class="gradient-bg text-white py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Why Partner With Sentient?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
-                <div class="p-4">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <p>Trusted by leading enterprises and government agencies</p>
-                </div>
-                <div class="p-4">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <p>Deep technical expertise and innovation track record</p>
-                </div>
-                <div class="p-4">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <p>Dedicated support and collaborative approach</p>
-                </div>
-                <div class="p-4">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <p>Commitment to responsible, ethical AI</p>
-                </div>
-                <div class="p-4">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-check-double"></i>
-                    </div>
-                    <p>Built for compliance and scale in regulated environments</p>
-                </div>
-            </div>
+    <!-- Partner Section -->
+    <section id="partner">
+        <div class="container">
+            <h2>Why Partner With Sentient?</h2>
+            <ul>
+                <li>Trusted by leading enterprises and government agencies</li>
+                <li>Deep technical expertise and innovation track record</li>
+                <li>Dedicated support and collaborative approach</li>
+                <li>Commitment to responsible, ethical AI</li>
+                <li>Built for compliance and scale in regulated environments</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Customer Case Studies -->
-    <section id="case-studies" class="bg-white py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Customer Case Studies</h2>
-            <div class="section-divider mx-auto"></div>
-            <p class="text-center mb-12 max-w-4xl mx-auto">Sentient.io has delivered successful projects across multiple industries:</p>
+    <!-- Case Studies Section -->
+    <section id="case-studies">
+        <div class="container">
+            <h2>Customer Case Studies</h2>
+            <p>Sentient.io has delivered successful projects across multiple industries:</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-3 text-green-800">Mediacorp</h3>
-                    <p>Parliamentary transcription and English Drama Subtitling (2019-2025); Machine translation of CNA news into Bahasa Indonesia and Mandarin.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-3 text-green-800">Ministry of Communications & Information</h3>
-                    <p>Transcription services for government agencies during COS 2020 and 2021.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-3 text-green-800">Defense Organisation</h3>
-                    <p>AI and Data Platform to enhance defense research collaboration globally.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-3 text-green-800">Daido Steel (Japan)</h3>
-                    <p>Deep learning system reducing false rejection rates in steel rod defect detection by 1000%.</p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold mb-3 text-green-800">IHI Asia Pacific</h3>
-                    <p>LIDAR data aggregation and traffic dashboard deployment for smart city traffic management.</p>
-                </div>
+            <div class="case-study">
+                <h3>Mediacorp</h3>
+                <p>Parliamentary transcription and English Drama Subtitling (2019-2025); Machine translation of CNA news into Bahasa Indonesia and Mandarin.</p>
+            </div>
+            
+            <div class="case-study">
+                <h3>Ministry of Communications & Information (MCI)</h3>
+                <p>Transcription services for government agencies during COS 2020 and 2021.</p>
+            </div>
+            
+            <div class="case-study">
+                <h3>Defense Organisation</h3>
+                <p>AI and Data Platform to enhance defense research collaboration globally.</p>
+            </div>
+            
+            <div class="case-study">
+                <h3>Daido Steel (Japan)</h3>
+                <p>Deep learning system reducing false rejection rates in steel rod defect detection by 1000%.</p>
+            </div>
+            
+            <div class="case-study">
+                <h3>IHI Asia Pacific</h3>
+                <p>LIDAR data aggregation and traffic dashboard deployment for smart city traffic management.</p>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="bg-gray-100 py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Sentient.io Team</h2>
-            <div class="section-divider mx-auto"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Christopher Yeo</h3>
-                        <p class="text-green-700 font-semibold mb-3">Founder / CEO</p>
-                        <p class="text-sm">Chief architect of Sentient.io with 25+ years of technology and entrepreneurial leadership</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Eddie Leong</h3>
-                        <p class="text-green-700 font-semibold mb-3">CFO</p>
-                        <p class="text-sm">Finance and IT project/program management expert</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Priya Somasundaram</h3>
-                        <p class="text-green-700 font-semibold mb-3">VP of Technology</p>
-                        <p class="text-sm">Specialist in full-stack engineering and team leadership</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1">Gloria Koh</h3>
-                        <p class="text-green-700 font-semibold mb-3">VP of Corporate Development</p>
-                        <p class="text-sm">Expert in retail strategy, trade operations, and marketing in APAC</p>
-                    </div>
-                </div>
+    <section id="team">
+        <div class="container">
+            <h2>Sentient.io Team</h2>
+            
+            <div class="grid-container">
+                <div class="team-member">
+    <img src="static/images/chris-yeo.png" alt="Christopher Yeo" style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin-bottom:15px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+    <h3>Christopher Yeo</h3>
+    <p><strong>Founder / CEO</strong></p>
+    <p>Chief architect of Sentient.io with 25+ years of technology and entrepreneurial leadership</p>
+</div>
+
+<div class="team-member">
+    <img src="static/images/eddie-leong.png" alt="Eddie Leong" style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin-bottom:15px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+    <h3>Eddie Leong</h3>
+    <p><strong>CFO</strong></p>
+    <p>Finance and IT project/program management expert</p>
+</div>
+
+<div class="team-member">
+    <img src="static/images/priya-somasundaram.png" alt="Priya Somasundaram" style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin-bottom:15px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+    <h3>Priya Somasundaram</h3>
+    <p><strong>VP of Technology</strong></p>
+    <p>Specialist in full-stack engineering and team leadership</p>
+</div>
+
+<div class="team-member">
+    <img src="static/images/gloria-koh.png" alt="Gloria Koh" style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin-bottom:15px; box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+    <h3>Gloria Koh</h3>
+    <p><strong>VP of Corporate Development</strong></p>
+    <p>Expert in retail strategy, trade operations, and marketing in APAC</p>
+</div>
             </div>
         </div>
     </section>
 
     <!-- Differentiators Section -->
-    <section id="differentiators" class="bg-white py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-green-900 mb-8">Differentiators & Technical Strengths</h2>
-            <div class="section-divider mx-auto"></div>
+    <section id="differentiators">
+        <div class="container">
+            <h2>Differentiators & Technical Strengths</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-                <!-- Technical Strengths -->
-                <div>
-                    <h3 class="text-2xl font-bold text-green-800 mb-6">Technical Strengths</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="text-green-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <div>
-                                <span class="font-semibold">Private AI Architecture:</span> Full data sovereignty with on-premise or private cloud deployment
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-green-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <div>
-                                <span class="font-semibold">Enterprise Integration:</span> Connect with all major content systems
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-green-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <div>
-                                <span class="font-semibold">Advanced NLP + RAG:</span> High-accuracy responses rooted in trusted sources
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-green-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <div>
-                                <span class="font-semibold">Model Flexibility:</span> Switch or customize LLMs to meet performance or cost goals
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-green-500 mr-3 mt-1"><i class="fas fa-check-circle"></i></span>
-                            <div>
-                                <span class="font-semibold">Custom Workflows:</span> Tailor to industry-specific needs and user experiences
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <h3 class="text-2xl font-bold text-green-800 mt-10 mb-6">Security, Compliance & Control</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-gray-100 p-4 rounded-lg flex items-center">
-                            <span class="text-green-500 mr-3"><i class="fas fa-lock"></i></span>
-                            <span>Role-Based Access Control</span>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg flex items-center">
-                            <span class="text-green-500 mr-3"><i class="fas fa-shield-alt"></i></span>
-                            <span>End-to-End Encryption</span>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg flex items-center">
-                            <span class="text-green-500 mr-3"><i class="fas fa-clipboard-list"></i></span>
-                            <span>Audit Logging</span>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg flex items-center">
-                            <span class="text-green-500 mr-3"><i class="fas fa-user-shield"></i></span>
-                            <span>No Data Leakage</span>
-                        </div>
-                    </div>
-                </div>
+            <div style="margin-bottom: 40px;">
+                <h3>Technical Strengths</h3>
+                <ul>
+                    <li><strong>Private AI Architecture:</strong> Full data sovereignty with on-premise or private cloud deployment</li>
+                    <li><strong>Enterprise Integration:</strong> Connect with all major content systems</li>
+                    <li><strong>Advanced NLP + RAG:</strong> High-accuracy responses rooted in trusted sources</li>
+                    <li><strong>Model Flexibility:</strong> Switch or customize LLMs to meet performance or cost goals</li>
+                    <li><strong>Custom Workflows:</strong> Tailor to industry-specific needs and user experiences</li>
+                </ul>
+            </div>
+            
+            <div style="margin-bottom: 40px;">
+                <h3>Security, Compliance & Control</h3>
+                <ul>
+                    <li>Role-Based Access Control</li>
+                    <li>End-to-End Encryption</li>
+                    <li>Audit Logging</li>
+                    <li>No Data Leakage</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>Business Impact & Use Cases</h3>
                 
-                <!-- Business Impact & Use Cases -->
-                <div>
-                    <h3 class="text-2xl font-bold text-green-800 mb-6">Business Impact & Use Cases</h3>
-                    <div class="space-y-4">
-                        <div class="bg-green-50 p-5 rounded-lg">
-                            <h4 class="font-semibold mb-2">Improve internal decision-making</h4>
-                            <p>Empower your teams with instant access to accurate information from your knowledge base.</p>
-                        </div>
-                        <div class="bg-green-50 p-5 rounded-lg">
-                            <h4 class="font-semibold mb-2">Enhance customer-facing touchpoints</h4>
-                            <p>Deliver consistent, accurate responses that align with your organizational knowledge.</p>
-                        </div>
-                        <div class="bg-green-50 p-5 rounded-lg">
-                            <h4 class="font-semibold mb-2">Automate repetitive knowledge tasks</h4>
-                            <p>Free up expert staff by automating routine information retrieval and analysis.</p>
-                        </div>
-                        <div class="bg-green-50 p-5 rounded-lg">
-                            <h4 class="font-semibold mb-2">Deployed in regulated industries</h4>
-                            <p>Successfully implemented in financial institutions, hospitals, and government agencies.</p>
-                        </div>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold text-green-800 mt-10 mb-6">Why Partner With Sentient</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <span class="text-green-500 mr-3"><i class="fas fa-star"></i></span>
-                            <span>Enterprise-Ready with SLAs</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-500 mr-3"><i class="fas fa-star"></i></span>
-                            <span>Scalable & Future-Proof</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-500 mr-3"><i class="fas fa-star"></i></span>
-                            <span>Committed to Ethical AI</span>
-                        </li>
-                    </ul>
-                </div>
+                <h4>Improve internal decision-making</h4>
+                <p>Empower your teams with instant access to accurate information from your knowledge base.</p>
+                
+                <h4>Enhance customer-facing touchpoints</h4>
+                <p>Deliver consistent, accurate responses that align with your organizational knowledge.</p>
+                
+                <h4>Automate repetitive knowledge tasks</h4>
+                <p>Free up expert staff by automating routine information retrieval and analysis.</p>
+                
+                <h4>Deployed in regulated industries</h4>
+                <p>Successfully implemented in financial institutions, hospitals, and government agencies.</p>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <h3>Why Partner With Sentient & SmartChat</h3>
+                <ul>
+                    <li>Enterprise-Ready with SLAs</li>
+                    <li>Scalable & Future-Proof</li>
+                    <li>Committed to Ethical AI</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-gray-100 py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-green-900 mb-8">Contact Us</h2>
-            <div class="section-divider mx-auto"></div>
-            <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
-                <div class="flex items-center justify-center mb-6">
-                    <span class="text-4xl text-green-500 mr-4"><i class="fas fa-envelope"></i></span>
-                    <div class="text-left">
-                        <h3 class="text-lg font-semibold">Email</h3>
-                        <a href="mailto:chris@sentient.io" class="text-green-500 hover:underline">chris@sentient.io</a>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center mb-6">
-                    <span class="text-4xl text-green-500 mr-4"><i class="fas fa-globe"></i></span>
-                    <div class="text-left">
-                        <h3 class="text-lg font-semibold">Website</h3>
-                        <a href="https://www.sentient.io" class="text-green-500 hover:underline">www.sentient.io</a>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center">
-                    <span class="text-4xl text-green-500 mr-4"><i class="fas fa-map-marker-alt"></i></span>
-                    <div class="text-left">
-                        <h3 class="text-lg font-semibold">Address</h3>
-                        <p>60 Paya Lebar Road, #07-54 Paya Lebar Square, Singapore 409051</p>
-                    </div>
-                </div>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p><strong>Email:</strong> chris@sentient.io</p>
+                <p><strong>Website:</strong> <a href="https://www.sentient.io" target="_blank">www.sentient.io</a></p>
+                <p><strong>Address:</strong> 60 Paya Lebar Road, #07-54 Paya Lebar Square, Singapore 409051</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-green-900 text-white py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold">Sentient.io</h3>
-                    <p class="text-sm opacity-75">Your Enterprise AI Partner</p>
-                </div>
-                <div>
-                    <p>Contact: <a href="mailto:chris@sentient.io" class="hover:underline">chris@sentient.io</a></p>
-                </div>
-            </div>
-            <div class="mt-6 text-center text-sm opacity-75">
-                <p>&copy; 2023 Sentient.io. All rights reserved.</p>
-            </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sentient.io - All Rights Reserved</p>
+            <p><strong>Contact:</strong> chris@sentient.io</p>
         </div>
     </footer>
 </body>
