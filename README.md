@@ -30,5 +30,19 @@ Open `src/index.html` in your browser to view the introduction site. You can cus
 - **Custom Markdown Parsing:** The About Us page uses a custom markdown parser (instead of marked.js) to ensure correct formatting for headings and bullet points.
 - **Image Management:** Place or update images in `static/images/` as needed for your marketing content.
 
+## Git Versions
+
+| Commit Hash | Date       | Description                                                        | Author    |
+|:------------|:-----------|:-------------------------------------------------------------------|:----------|
+| 82bea4d     | 2025-05-18 | Reorganize project structure with src directory and add Vercel configuration | Chris Yeo |
+| a71d23e     | 2025-04-30 | Adjusted Differentiators section                                   | Chris Yeo |
+| 6a75170     | 2025-04-30 | Fixed Singapore map name                                           | Chris Yeo |
+| bd07837     | 2025-04-30 | Final Version 1.0 of Sentient-intro                                | Chris Yeo |
+| 28a7418     | 2025-04-29 | Visual improvements                                                | Chris Yeo |
+| 03ce3f1     | 2025-04-29 | Website content and visual tweaks                                  | Chris Yeo |
+| 6f7c580     | 2025-04-29 | Thematic sentient website                                          | Chris Yeo |
+| 2a93f16     | 2025-04-29 | Created new content for sentient.io                                | Chris Yeo |
+| cd89cda     | 2025-04-29 | Initial project setup                                              | Chris Yeo |
+
 ## Contact
 For partnership inquiries or to request a demo, contact [Sentient.io](mailto:contact@sentient.io).
