@@ -64,7 +64,6 @@ We are trusted by enterprises and governments alike, and our evolution from trad
 - **Scalable & Flexible:** Deploy on-premise, private cloud, or hybrid environments to fit your requirements.
 
 ---
-
 ## Solutions & Capabilities
 
 ### Sentient AI Platform
@@ -160,4 +159,3 @@ For IHI Asia Pacific, Sentient.io delivered a comprehensive LIDAR data aggregati
 - **Email:** contact@sentient.io
 - **Website:** [www.sentient.io](https://www.sentient.io)
 - **Address:** 60 Paya Lebar Road, #07-54 Paya Lebar Square, Singapore 409051
-

@@ -17,13 +17,14 @@ This project introduces Sentient.io’s strengths, solutions, and value proposit
     - Improved the visual consistency of the "Our Value to Enterprises" section with enhanced CSS for the cards.
 
 ## Project Structure
+- `src/` – HTML files for the website
 - `content/` – Markdown content for the website (About, Solutions, Value Proposition, etc.)
 - `static/` – Static assets such as CSS, images (`static/images/`), and JavaScript
 - `templates/` – HTML templates for rendering the site
 - `tests/` – Test scripts (if any site logic or automation is added)
 
 ## Usage
-Open `index.html` in your browser to view the introduction site. You can customize the content in `content/content.md` and extend the design or features as needed for your enterprise or partnership presentations.
+Open `src/index.html` in your browser to view the introduction site. You can customize the content in `content/content.md` and extend the design or features as needed for your enterprise or partnership presentations.
 
 ### Technical Notes
 - **Custom Markdown Parsing:** The About Us page uses a custom markdown parser (instead of marked.js) to ensure correct formatting for headings and bullet points.
