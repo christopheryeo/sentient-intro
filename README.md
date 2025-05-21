@@ -1,5 +1,8 @@
 # Sentient Intro
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchristopheryeo%2Fsentient-intro)
+[![Vercel Status](https://vercel-badge-ochre.vercel.app/?app=sentient-intro)](https://vercel.com/christopheryeo/sentient-intro)
+
 A corporate introduction and partnership site for Sentient, designed to present Sentient as a valuable, innovative partner to enterprises.
 
 ## Purpose
