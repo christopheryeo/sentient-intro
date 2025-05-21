@@ -23,19 +23,23 @@ Unlock the full potential of your organization with secure, enterprise-grade AI 
 #### Key Investors
 - Real Tech Holdings
 - SEEDS Capital
+- A*Star
 - BEENEXT
 - ABC Dream Ventures
 - DG Ventures
 - Origgin Ventures
 - Avior Capital
+- UntroD (formerly RTF)
 
 #### Clients & Partners
 - Toyota Tsusho Asia Pacific
 - IHI
 - Daido Steel
 - Mediacorp
-- Google
 - Singapore Government
+- PT Profis
+- BluePrism Inc.
+- Partners: Google, A*Star
 
 ### Mission and Vision
 **Sentient.io's mission is to democratize enterprise AI adoption.** By enabling developers and business users to leverage powerful, modular AI services—without needing AI expertise—Sentient reduces the barrier to advanced automation and intelligent applications.
