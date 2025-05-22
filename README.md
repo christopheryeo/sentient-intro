@@ -37,6 +37,7 @@ Open `src/index.html` in your browser to view the introduction site. You can cus
 
 | Commit Hash | Date       | Description                                                        | Author    |
 |:------------|:-----------|:-------------------------------------------------------------------|:----------|
+| fb7bbbd     | 2025-05-23 | Update team section with professional backgrounds and README fixes | Chris Yeo |
 | c258b87     | 2025-05-21 | Updated company investors and partners list                      | Chris Yeo |
 | a4f94c6     | 2025-05-21 | Add Vercel deployment status badge to README                       | Chris Yeo |
 | b4c62df     | 2025-05-21 | Added RTF in company facts page                                    | Chris Yeo |
