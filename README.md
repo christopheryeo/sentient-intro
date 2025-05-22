@@ -37,9 +37,10 @@ Open `src/index.html` in your browser to view the introduction site. You can cus
 
 | Commit Hash | Date       | Description                                                        | Author    |
 |:------------|:-----------|:-------------------------------------------------------------------|:----------|
+| c258b87     | 2025-05-21 | Updated company investors and partners list                      | Chris Yeo |
 | a4f94c6     | 2025-05-21 | Add Vercel deployment status badge to README                       | Chris Yeo |
 | b4c62df     | 2025-05-21 | Added RTF in company facts page                                    | Chris Yeo |
-| 82bea4d     | 2025-05-18 | Reorganized project structure and Vercel config                   | Chris Yeo |
+| 82bea4d     | 2025-05-18 | Reorganized project structure and Vercel config                    | Chris Yeo |
 | a71d23e     | 2025-04-30 | Adjusted Differentiators section                                   | Chris Yeo |
 | 6a75170     | 2025-04-30 | Fixed Singapore map name                                           | Chris Yeo |
 | bd07837     | 2025-04-30 | Final Version 1.0 of Sentient-intro                                | Chris Yeo |

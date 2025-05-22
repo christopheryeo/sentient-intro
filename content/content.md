@@ -128,10 +128,10 @@ For IHI Asia Pacific, Sentient.io delivered a comprehensive LIDAR data aggregati
 
 ## Team
 
-### SmartChat Team
-- **Christopher Yeo** – Founder / CEO – Chief architect behind Sentient.io, he leads with over 25 years of experience in the technology industry and as an experienced technopreneur under his belt.
-- **Eddie Leong** – CFO – Specialises in finance as well as IT project / program management, application management.
-- **Priya Somasundaram** – Technology, VP – Highly experienced in full-stack IT engineering and team leadership.
+### Sentient Team
+- **Christopher Yeo** – Founder / CEO – Chief architect behind Sentient.io, he leads with over 25 years of experience in the technology industry, including key leadership roles at Singapore Press Holdings where he pioneered digital transformation initiatives across media platforms.
+- **Eddie Leong** – CFO – Brings extensive experience in financial strategy and IT project management, with a distinguished track record in Government Corporation where he led large-scale digital transformation programs and financial system implementations.
+- **Priya Somasundaram** – Technology, VP – A technology leader with deep expertise in full-stack engineering, Priya previously led critical IT infrastructure projects at Singapore Press Holdings, driving innovation in media technology solutions.
 - **Gloria Koh** – Corporate Development, VP – Specialises in Asia-Pacific retail market, business strategy and projections, trade operations, and marketing communications.
 
 ---
